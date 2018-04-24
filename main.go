@@ -26,8 +26,14 @@ func main() {
 		},
 	}
 
+	tolgaPointer := &tolga
+	tolgaPointer.updateName("ahmet")
 	tolga.print()
 
+}
+
+func (pointerToPerson *person) updateName(newFirsName string) {
+	(*pointerToPerson).firstName = newFirsName
 }
 
 func (p person) print() {
